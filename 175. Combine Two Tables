@@ -1,0 +1,10 @@
+# Here We Used The Concept Of Left Join To Combine the Two tables anf fill NULL values if personId not found in Address Table
+# Write your MySQL query statement below
+
+Select Person.firstName as firstName,
+Person.lastName as lastName,
+Address.city as city,
+Address.state as state
+from Person Left Join Address
+on
+Person.personId = Address.personId;
